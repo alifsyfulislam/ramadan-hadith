@@ -1,9 +1,9 @@
 var namajTiming = [
-    { h: 4, m: 35, s: 0,i:0,azanName: "Fajar"},
+    { h: 4, m: 10, s: 0,i:0,azanName: "Fajar"},
     { h: 12, m: 45, s: 0,i:1,azanName: "Zohur"},
-    { h: 16, m: 45, s: 0,i:2,azanName: "Asar"},
+    { h: 16, m: 30, s: 0,i:2,azanName: "Asar"},
     { h: 18, m: 25, s: 0,i:3,azanName: "Magrib"},
-    { h: 20, m: 0, s: 0,i:4,azanName: "Esha"}
+    { h: 19, m: 45, s: 0,i:4,azanName: "Esha"}
 ];
 
 var hadithTeller = [
@@ -194,12 +194,12 @@ function playCounter() {
         if (item.i == 0 && timeTosec(item.h, item.m, item.s)- timeTosec(parseInt(today.getHours()),parseInt(today.getMinutes()),parseInt(today.getSeconds()))> 0 &&
             (timeTosec(item.h, item.m, item.s)-timeTosec(parseInt(today.getHours()),parseInt(today.getMinutes()),parseInt(today.getSeconds()))<=4*60*60)){
             countDown.innerText = printTimer(timeTosec(item.h, item.m, item.s)-timeTosec(parseInt(today.getHours()),parseInt(today.getMinutes()),parseInt(today.getSeconds())));
-            title.innerText = "Sehri Countdown";
+            title.innerText = "Sehri Time";
         }
         else if (item.i == 3 && timeTosec(item.h, item.m, item.s) - timeTosec(parseInt(today.getHours()),parseInt(today.getMinutes()),parseInt(today.getSeconds()))> 0 &&
             (timeTosec(item.h, item.m, item.s)-timeTosec(parseInt(today.getHours()),parseInt(today.getMinutes()),parseInt(today.getSeconds()))<=12*60*60)){
             countDown.innerText = printTimer(timeTosec(item.h, item.m, item.s)-timeTosec(parseInt(today.getHours()),parseInt(today.getMinutes()),parseInt(today.getSeconds())));
-            title.innerText = "Iftar Countdown";
+            title.innerText = "Iftar Time";
         }
         // else{
         //     title.innerText = "Current Time";
@@ -229,5 +229,19 @@ function timeTosec(h, m, s) {
 adArea.addEventListener('click', function () {
     window.open("https://www.wizardsbd.com/");
 })
+
+
+let fazar = document.getElementById('fazar');
+let zohur = document.getElementById('zohur');
+let asar = document.getElementById('asar');
+let magrib = document.getElementById('magrib');
+let esha = document.getElementById('esha');
+
+
+fazar.innerHTML = namajTiming[0].h +":"+ namajTiming[0].m;
+zohur.innerHTML = namajTiming[1].h +":"+ namajTiming[1].m;
+asar.innerHTML = namajTiming[2].h +":"+ namajTiming[2].m;
+magrib.innerHTML = namajTiming[3].h +":"+ namajTiming[3].m;
+esha.innerHTML = namajTiming[4].h +":"+ namajTiming[4].m;
 
 

@@ -71,19 +71,24 @@ body,html{
     color: whitesmoke;
 }
 
-.content_box h2{
-    font-size: 22px;
-    color: whitesmoke;
-}
+/*.content_box h2{*/
+    /*font-size: 22px;*/
+    /*color: whitesmoke;*/
+/*}*/
 
 .content_box h3{
     font-size: 20px;
     color: whitesmoke !important;
 }
 
+.content_box h4{
+    font-size: 20px;
+    color: whitesmoke !important;
+}
+
 .content_box p {
     font-family: "Arial Narrow";
-    font-size: 14px;
+    font-size: 13px;
     color: whitesmoke;
 }
 
@@ -114,5 +119,9 @@ body,html{
     50%{
         transform: scale(.9);
     }
+}
+
+#fazar,#zohur,#asar,#magrib,#esha{
+    color: black !important;
 }
 
